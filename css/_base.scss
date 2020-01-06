@@ -1,0 +1,100 @@
+
+// font
+$eng:  'Montserrat';
+@mixin eng {
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+// font-size
+$j-h1: 3rem;
+$j-h2: 2.8rem;
+$j-mid: 2.2rem;
+$j-h3: 2rem;
+$j-base: 1.6rem;
+$j-sm: 1.2rem;
+
+$e-h1: 3.8rem;
+$e-h2: 3.6rem;
+$e-h3: 2rem;
+$e-base: 1.8rem;
+$e-sm: 1.4rem;
+
+@media screen and (max-width: 959px) {
+$j-h1: 2.4rem;
+$j-h2: 2.2rem;
+$j-mid: 1.8rem;
+$j-h3: 1.6rem;
+$j-base: 1.2rem;
+$j-sm: .9rem;
+
+$e-h1: 3rem;
+$e-h2: 2.8rem;
+$e-h3: 1.6rem;
+$e-base: 1.4rem;
+$e-sm: 1.1rem;
+}
+@media screen and (max-width: 559px) {
+$j-h1: 2rem;
+$j-h2: 1.8rem;
+$j-mid: 1.4rem;
+$j-h3: 1.2rem;
+$j-base: .8rem;
+$j-sm: .6rem;
+
+$e-h1: 2.6rem;
+$e-h2: 2.4rem;
+$e-h3: 1.2rem;
+$e-base: 1rem;
+$e-sm: .8rem;
+} 
+
+
+// color
+$white: #fff;
+$gray: #F3F3F3;
+$orange: #FFAA3B;
+$blue: #4973FF;
+$red: #FF4646;
+$black: #3E3E3E;
+
+//btn {
+@mixin bk-btn {
+  display: inline-block;
+  width: 30rem;
+  padding: 2.1rem;
+  color: $white;
+  border: 1px solid $white;
+  @include eng;
+  font-size: $e-h3;
+  letter-spacing: .4rem;
+  text-align: center;
+}
+//size
+@mixin w-h-100 {
+  width: 100%;
+  height: 100%;
+}
+
+//hover
+@mixin a-line {
+  position: relative;
+  transition: all .3s ease 0s;
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: .2rem;
+    background: rgba(112, 112, 112, 1);
+  }
+  &:hover::after {
+    transition: all .3s ease 0s;
+    width: 115%;
+  }
+}
+
+//animate
+$form-anm: all .2s ease 0s;
